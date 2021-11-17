@@ -14,11 +14,11 @@
 #### Install by npm or yarn
 
 ```sh
-npm install --save react-native-material-date-picker
+npm i react-native-date-picker-material
 
 or
 
-yarn add react-native-material-date-picker
+yarn add react-native-date-picker-material
 ```
 
 
@@ -26,7 +26,7 @@ yarn add react-native-material-date-picker
 #### Usage
 
 ```sh
-import { ModalDatePicker } from "react-native-material-date-picker";
+import { ModalDatePicker } from "react-native-date-picker-material";
 
 const App = () => {
   return (             
@@ -58,7 +58,7 @@ const App = () => {
 | onHidden | func | - | Run after hidden the picker (only ModalDatePicker) |
 | isHideOnSelect | boolean | false | Determines whether the modal will be closed (only ModalDatePicker) |
 | initialDate | Date | Now | Initial date for picker (only ModalDatePicker) |
-| language | JSON File | - | Your custom language file for months and days (<a href="https://github.com/ilkerkesici/react-native-material-date-picker/blob/master/locales/tr.json">Example</a>) |
+| language | JSON File | - | Your custom language file for months and days (<a href="https://github.com/NTV-97/react-native-date-picker-material/blob/master/locales/en.json">Example</a>) |
 
 
 

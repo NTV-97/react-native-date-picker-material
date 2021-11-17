@@ -1,6 +1,6 @@
 {
   "name": "react-native-date-picker-material",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Date picker material for react-native",
   "main": "index.ts",
   "scripts": {
@@ -12,6 +12,6 @@
     "react-native",
     "material"
   ],
-  "author": "Thanh Vinh <korytanzan@gmail.com> (https://github.com/ilkerkesici)",
+  "author": "Thanh Vinh <korytanzan@gmail.com> (https://github.com/NTV-97/)",
   "license": "ISC"
 }
