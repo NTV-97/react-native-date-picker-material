@@ -17,6 +17,7 @@ interface IModalDatePicker {
   language?: any;
   disableBack?: boolean;
   disableForward?: boolean;
+  dateDisable?: Date;
 }
 
 export class ModalDatePicker extends React.Component<IModalDatePicker> {
@@ -59,6 +60,7 @@ export class ModalDatePicker extends React.Component<IModalDatePicker> {
       language,
       disableBack,
       disableForward,
+      dateDisable,
     } = this.props;
     const Button = button ? (
       <TouchableOpacity onPress={this.showModal}>{button}</TouchableOpacity>
@@ -79,6 +81,7 @@ export class ModalDatePicker extends React.Component<IModalDatePicker> {
           language={language}
           disableBack={disableBack}
           disableForward={disableForward}
+          dateDisable={dateDisable}
         />
       </Modal>
     );

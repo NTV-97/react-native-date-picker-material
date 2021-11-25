@@ -72,3 +72,39 @@ export const getLastAndFirstDateOfWeek = (current: Date) => {
   };
   return result;
 };
+
+export const compareDatesLess = (firstDate: Date, secondDate: Date) => {
+  const isLessYear = firstDate.getFullYear() < secondDate.getFullYear();
+  const isLessMonth = firstDate.getMonth() < secondDate.getMonth();
+  const isLessDay = firstDate.getDate() < secondDate.getDate();
+  const isYearEqual = firstDate.getFullYear() === secondDate.getFullYear();
+  const isMonthEqual = firstDate.getMonth() === secondDate.getMonth();
+  if(isLessYear) {
+    return true;
+  }
+  if(isLessMonth && isYearEqual) {
+    return true
+  }
+  if(isLessDay && isMonthEqual && isYearEqual) {
+    return true
+  }
+  return false;
+}
+
+export const compareDatesBig = (firstDate: Date, secondDate: Date) => {
+  const isBigYear = firstDate.getFullYear() > secondDate.getFullYear();
+  const isBigMonth = firstDate.getMonth() > secondDate.getMonth();
+  const isBigDay = firstDate.getDate() > secondDate.getDate();
+  const isYearEqual = firstDate.getFullYear() === secondDate.getFullYear();
+  const isMonthEqual = firstDate.getMonth() === secondDate.getMonth();
+  if(isBigYear) {
+    return true;
+  }
+  if(isBigMonth && isYearEqual) {
+    return true
+  }
+  if(isBigDay && isMonthEqual && isYearEqual) {
+    return true
+  }
+  return false;
+}

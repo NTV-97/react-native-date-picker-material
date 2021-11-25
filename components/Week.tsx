@@ -10,6 +10,7 @@ interface IPropsWeek {
   week: Date[];
   startDate: Date;
   endDate: Date;
+  dateDisable?: Date;
 }
 
 export const Week: React.FC<IPropsWeek> = ({
@@ -19,6 +20,7 @@ export const Week: React.FC<IPropsWeek> = ({
   startDate,
   week,
   dayColor,
+  dateDisable,
 }) => {
   return (
     <View style={styles.container}>
@@ -30,6 +32,7 @@ export const Week: React.FC<IPropsWeek> = ({
           date={date}
           isPressed={areDatesEqual(currentDate, date)}
           disable={date < startDate || date > endDate}
+          dateDisable={dateDisable}
         />
       ))}
     </View>

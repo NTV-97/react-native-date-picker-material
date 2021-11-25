@@ -7,6 +7,7 @@ import {
   Platform,
   StatusBar,
   StyleSheet,
+  TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
@@ -201,7 +202,12 @@ export class Modal extends React.Component {
           ]}
           transparent
           onDismiss={this._onDismiss}>
-          <TouchableWithoutFeedback onPress={this._hide} accessible={false}>
+          <TouchableOpacity onPress={this._hide}
+          activeOpacity={1}
+          style={{
+            backgroundColor:'rgba(0,0,0,0.3)', width: windowWidth, height: windowHeight
+          }}
+          >
             <View>
               <Animated.View
                 onLayout={this._onMenuLayout}
@@ -216,7 +222,7 @@ export class Modal extends React.Component {
                 </Animated.View>
               </Animated.View>
             </View>
-          </TouchableWithoutFeedback>
+          </TouchableOpacity>
         </ReactModal>
       </View>
     );

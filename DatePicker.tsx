@@ -16,6 +16,7 @@ interface IPropsDatePicker {
   language?: any;
   disableBack?: boolean;
   disableForward?: boolean;
+  dateDisable?: Date;
 }
 
 export class DatePicker extends React.Component<IPropsDatePicker> {
@@ -98,7 +99,7 @@ export class DatePicker extends React.Component<IPropsDatePicker> {
   render() {
     const {weeks, selectedDate, start, end, days, months, currentDate} =
       this.state;
-    const {color, disableBack, disableForward} = this.props;
+    const {color, disableBack, disableForward, dateDisable} = this.props;
     return (
       <View style={styles.container}>
         <Navigator
@@ -119,6 +120,7 @@ export class DatePicker extends React.Component<IPropsDatePicker> {
             startDate={start}
             endDate={end}
             dayColor={color}
+            dateDisable={dateDisable}
           />
         ))}
       </View>
